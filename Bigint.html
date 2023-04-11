@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigint</title>
+</head>
+<body>
+    <h2>Bigint Operator</h2>
+    <p>Dalam Js, Number mewakili nilai bilangan bulat yang lebih besar dari 2/53. keterbatasan ini
+        memaksa pengembang untuk menggunakan solusi yang tidak efisien dan perpustakaan pihak ketiga.
+        Bigint adalah tipe data baru yang dimaksudkan untuk memperbaikinya.
+    </p>
+    <script>
+        document.write("contoh number" +"</br>");
+        document.write(7*98888888888776555544445555565655687+"</br>");// hasilnya tidak sampai akhir dan paling belakang ada e+35
+        document.write("contoh bigint" +"</br>");
+        document.write(7n*98888888888776555544445555565655687n+"</br>");// hasilnya sampai akhir
+        document.write(7n % 8n);//tidak muncul "n" karena cuma 1 huruf
+    </script>
+</body>
+</html>
