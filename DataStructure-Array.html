@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structure Array</title>
+</head>
+<body>
+     <h1>Data Mahasiswa</h1>
+	<table id="table">
+		<tr>
+			<th>Nama</th>
+			<th>NIM</th>
+			<th>Jurusan</th>
+		</tr>
+	</table>
+
+    <script>
+        const mahasiswa = [
+			["Selamet", "2022010033", "Rekayasa perangkat lunak"],
+			["Bowok", "2022010012", "Rekayasa perangkat lunak"],
+            ["Zainal", "2022010016", "Rekayasa perangkat lunak"],
+			
+		];
+        var table = document.getElementById("table");
+        for(let i = 0; i<mahasiswa.length; i++) {
+            document.write(mahasiswa[i]+"<br>");
+        }
+    </script>
+</body>
+</html>

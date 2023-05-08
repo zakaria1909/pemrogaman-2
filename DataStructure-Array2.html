@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3teman dan hobi</title>
+	<script>
+		var konco = ["Selamet", "Teguh", "Zainal", "Lana"];
+		var hobi = ["Tidur", "Makan", "Masak", "Nyayi"];
+		
+		function displayData() {
+			var list = document.getElementById("konco-list");
+			list.innerHTML = "";
+			for (var i = 0; i < konco.length; i++) {
+				list.innerHTML += "<li>" + konco[i] + " (" + hobi[i] + ")</li>";
+			}
+		}
+		
+		function addData() {
+			var koncojengen = prompt("Masukkan nama teman baru:");
+			var hobinekonco = prompt("Masukkan hobi teman baru:");
+			konco.push(koncojengen);
+			hobi.push(hobinekonco);
+			displayData();
+		}
+		
+		function removeData() {
+			var friendIndex = prompt("Masukkan indeks teman yang ingin dihapus:");
+			konco.splice(friendIndex, 1);
+			hobi.splice(friendIndex, 1);
+			displayData();
+		}
+	</script>
+</head>
+<body>
+	<h1>My Friends and Their Hobbies</h1>
+	<p>Daftar teman:</p>
+	<ul id="konco-list"></ul>
+	<button onclick="addData()">Tambah Teman</button>
+	<button onclick="removeData()">Hapus Teman</button>
+	<script>displayData();</script>
+</body>
+</html>
