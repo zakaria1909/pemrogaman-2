@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="katakata">
+      <img src="polibang-removebg-preview.png"
+          title="polibang"/>
+      <h1>ZAKARIA AHMADA</h1>
+      <div class="navbar">
+        <div class="array"><a href="dataarray.html">ARRAY</a></div>
+        <div class="biodata"><a href="biodata.html">BIODATA</a></div>
+      </div>
+    </div>
+    <nav>
+        <div class="kotak">
+          <isi><h1>Masukkan nama serta nilai</h1></isi>
+            <table>
+                <tr>
+                  <form action="" id="data">
+                    <ul>
+                      <li><label for="nim">Nim Mahasiswa &emsp;:</label></li>
+                      <input type="text" id="Nim" placeholder="nim..." />
+                    <br />
+                      <li><label for="nama">Nama Mahasiswa&emsp; :</label></li>
+                      <input
+                        type="text"
+                        id="username"
+                        placeholder="username..."
+                      />
+                      <li><label for="matkul">Mata Kuliah :</label></li>
+                      <select name="makul" id="mak">
+                        <option value="Pendidikan Pancasila">
+                          Pendidikan Pancasila
+                        </option>
+                        <option value="Praktik Pemrogaman">
+                          Praktik Premogaman 2
+                        </option>
+                        <option value="Arsitektur Komputer">
+                          Arsitektur Komputer
+                        </option>
+                        <option value="Bahasa Indonesia">
+                          Bahasa Indonesia
+                        </option>
+                        <option value="Desain Perangkat Lunak">
+                          Desain Perangkat Lunak
+                        </option>
+                        <option value="Struktur Data dan Algoritma">
+                          Struktur Data dan Algoritma
+                        </option>
+                        <option value="komputer2">Komputer 2</option>
+                        <option value="kalkulus">Kalkulus</option>
+                        <option value="sistemoperasi">Sistem Operasi</option>
+                      </select>
+                      <li><label for="nilai">Nilai Mahasiswa :</label></li>
+                      <input  type="text" id="nilai" placeholder="nilai..." />
+                    </div>
+                  </ul>
+                </form>
+                </tr>
+              <button type="button" onclick="tampil()">tampil</button>
+              <div id="tampilan"></div>
+              <button type="reset" onclick="resetf()" value="reset">reset</button>
+          </div><hr>
+              <div class="output-zk" id="output"></div>
+            <form action="" id="output">
+              <table class="table1">
+                <tr><hr>
+                  <div class="reset2">
+                    <ul>
+                      <li>Nim Mahasiswa : <span id="nimmhs"></span></li>
+
+                      <li>Nama Mahasiswa : <span id="namamhs"></span></li>
+
+                      <li>Matkul Mahasiswa : <span id="matkulmhs"></span></li>
+
+                      <li>
+                        Nilai Mahasiswa :
+                        <span id="nilaimhs"></span>
+                      </li>
+
+                      <li>
+                        Grade Mahasiswa :
+                        <span id="grademhs"></span>
+                      </li>
+                      <li>Indeks Nilai : <span id="indeksmhs"></span></li>
+                    </ul>
+                  </div>
+                </tr>
+              </table>
+            </form>
+            </table>
+    </nav>
+    <script src="isi.js"></script>
+  </body>
+</html>

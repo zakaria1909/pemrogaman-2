@@ -1,0 +1,49 @@
+body {
+  background-color: #666;
+}
+.tengah {
+  text-align: center;
+}
+.container {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: #999;
+}
+h1 {
+  color: black;
+}
+img {
+  width: 200px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+h2,
+h3 {
+  color: black;
+}
+p {
+  color: black;
+  line-height: 1.5;
+}
+.logo {
+  text-align: center;
+}
+.kotak {
+  border: 3px solid black;
+  border-radius: 3px;
+}
+.array {
+  background-color: #ffffff;
+  border: solid 1px rgb(8, 8, 8);
+  color: rgb(4, 4, 4);
+}
+.home {
+  background-color: #ffffff;
+  border: solid 1px rgb(8, 8, 8);
+  color: rgb(4, 4, 4);
+}
+

@@ -1,0 +1,33 @@
+body {
+  background-color: lightslategrey;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+}
+dd {
+  border-top: 1px solid white;
+  margin: 10px 0;
+  background-color: aqua;
+  border: 3px solid white;
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+}
+.kotak {
+  border: 3px solid black;
+  border-radius: 3px;
+}
+.date {
+  text-align: center;
+}
+.biodata {
+  background-color: #ffffff;
+  border: solid 1px rgb(8, 8, 8);
+  color: rgb(4, 4, 4);
+}
+.home {
+  background-color: #ffffff;
+  border: solid 1px rgb(8, 8, 8);
+  color: rgb(4, 4, 4);
+}
