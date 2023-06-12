@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembagian Kelompok</title>
+    <style>
+      body {
+        background-color: rgb(91, 77, 77);
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      .countainer {
+        font-family: sans-serif;
+        text-align: center;
+        max-width: 500px;
+        margin: 225px auto;
+        padding: 20px;
+        border: 2px solid;
+        border-radius: 10px;
+        background-color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="countainer">
+      <h2>Pembagian Kelompok</h2>
+
+      <label for="students">Masukkan daftar siswa (pisahkan dengan koma):</label
+      ><br />
+      <textarea id="students" rows="4" cols="50"></textarea><br />
+      <label for="groupSize">Jumlah anggota per kelompok:</label>
+      <input type="number" id="groupSize" min="1" value="1" /><br />
+      <button onclick="bagiKelompok()">Bagi Kelompok</button>
+
+      <h3>Kelompok-kelompok:</h3>
+      <div id="result"></div>
+    </div>
+    <script>
+      function bagiKelompok() {
+        var students = document.getElementById("students").value.split(",");
+        var groupSize = parseInt(document.getElementById("groupSize").value);
+
+        if (students.length === 0) {
+          alert("Masukkan daftar siswa terlebih dahulu.");
+          return;
+        }
+
+        if (groupSize <= 0) {
+          alert("Jumlah anggota per kelompok harus lebih besar dari 0.");
+          return;
+        }
+
+        var kelompok = [];
+        var i = 0;
+        while (i < students.length) {
+          kelompok.push(students.slice(i, i + groupSize));
+          i += groupSize;
+        }
+
+        var resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = "";
+
+        var table = document.createElement("table");
+        for (var j = 0; j < kelompok.length; j++) {
+          var row = document.createElement("tr");
+          var cell = document.createElement("td");
+          cell.appendChild(
+            document.createTextNode("Kelompok " + (j + 1) + ": " + kelompok[j])
+          );
+          row.appendChild(cell);
+          table.appendChild(row);
+        }
+
+        resultDiv.appendChild(table);
+      }
+    </script>
+  </body>
+</html>

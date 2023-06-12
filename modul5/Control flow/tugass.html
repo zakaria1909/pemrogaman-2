@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+        <label>Nama : </label>
+        <input type="text" id="nama" name="nama" placeholder="Username..." />
+    </p>
+    <p>
+        <label>Nim : </label>
+        <input type="text" id="nim" name="nim" placeholder="Nim Mhs..." />
+    </p>
+    
+    <p>
+        <button onclick="tampil()">tampilkan</button>
+        <div id="tampil" class="tampil"></div>
+    </p>
+    <p id="result"></p>
+    <script>
+        function tampil(){
+            var name = document.getElementById("nama").value;
+            var Nim = document.getElementById("nim").value;
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "";
+
+            var number = parseInt(Nim);
+            switch (true) {
+                case isNaN(number):
+                    resultElement.innerHTML = "Masukkan harus angka";
+                    break;           
+                default:
+                    if (number % 2 === 0){
+                        document.write("Username = "+name+"<br>");
+                        document.write("Materi = Membuat web penjualan");
+                    }else{
+                        document.write(name);
+                        document.write("Membuat web agama");
+                    }
+                    break;
+            }
+        }
+    </script>
+  </body>
+</html>
